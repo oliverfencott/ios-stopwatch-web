@@ -1,8 +1,10 @@
 'use strict';
 
+const SYSTEM_BACKGROUND_COLOR = '#F7F7F7';
+const BORDER = '1px solid rgba(0, 0, 0, 0.3)';
+
 const Style = {
   container: {
-    fontFamily: 'BlinkMacSystemFont',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -15,16 +17,16 @@ const Style = {
   },
   statusBar: {
     height: '2.5%',
-    backgroundColor: '#F0F0F0',
+    backgroundColor: SYSTEM_BACKGROUND_COLOR,
   },
   navigationTitle: {
-    backgroundColor: '#F7F7F7',
+    backgroundColor: SYSTEM_BACKGROUND_COLOR,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     fontWeight: 500,
-    height: '6.5%',
-    borderBottom: '1px solid rgba(0, 0, 0, 0.3)'
+    height: 'calc(6.5% - 1px)',
+    borderBottom: BORDER
   },
   timerContainer: {
     height: '25%',
@@ -43,9 +45,16 @@ const Style = {
     alignItems: 'center'
   },
   lapsContainer: {
-    height: '48.5%',
-    backgroundColor: 'teal',
+    backgroundColor: '#F0F0F0',
+    height: '40.5%',
     overflow: 'scroll'
+  },
+  tabBar: {
+    height: 'calc(6% - 1px)',
+    backgroundColor: SYSTEM_BACKGROUND_COLOR,
+    borderTop: BORDER,
+    display: 'flex',
+    justifyContent: 'space-between'
   }
 };
 

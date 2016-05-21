@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 import Style from './LapsStyle';
 
-const lapsData = _.times(40, {});
+const lapsData = _.times(7, {});
 
 const LapsContainer = () => {
   return <Laps laps={lapsData} />;
@@ -14,7 +14,7 @@ const LapsContainer = () => {
 const Laps = ({ laps }) => {
   return (
     <div style={Style.lapsContainer}>
-      {laps.map(renderLap)}
+      {laps.map(renderLap).reverse()}
     </div>
   );
 };
@@ -22,7 +22,13 @@ const Laps = ({ laps }) => {
 function renderLap(lap, index) {
   return (
     <div key={index} style={Style.lapItem}>
-      Lap {index + 1}
+      <div style={Style.lapItemLabel}>
+        Lap {index + 1}
+      </div>
+
+      <div style={Style.lapItemTime}>
+        00:00.00
+      </div>
     </div>
   );
 }

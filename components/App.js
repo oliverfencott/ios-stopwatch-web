@@ -3,6 +3,11 @@
 import React from 'react';
 import Style from './AppStyle';
 
+import Alarm from './icons/Alarm';
+import Stopwatch from './icons/Stopwatch';
+import Timer from './icons/Timer';
+import WorldClock from './icons/WorldClock';
+
 import {
   CurrentLapContainer,
   TotalTimeElapsedContainer
@@ -33,6 +38,13 @@ const App = () => {
 
         <div style={Style.lapsContainer}>
           <LapsContainer />
+        </div>
+
+        <div style={Style.tabBar}>
+          {/*<WorldClock />
+          <Alarm />
+          <Stopwatch />
+          <Timer />*/}
         </div>
       </div>
     </div>
